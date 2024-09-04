@@ -1,6 +1,8 @@
 import {defineConfig} from 'vite'
 import laravel from 'laravel-vite-plugin'
+import react from '@vitejs/plugin-react'
 import dotenv from 'dotenv'
+import tsconfigPaths from "vite-tsconfig-paths";
 
 dotenv.config()
 
@@ -18,9 +20,14 @@ export default defineConfig({
     server: {
         ...extendedViteDevServerOptions
     },
+    ssr: {
+		noExternal: ['@inertiajs/server'],
+    },
     plugins: [
+        tsconfigPaths(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
+            ssr: 'resources/js/ssr.jsx',
             refresh: true,
         }),
         {
@@ -34,5 +41,6 @@ export default defineConfig({
                 }
             },
         },
+        react(),
     ],
 })

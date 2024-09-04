@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            // Components
+            "components/*": ["resources/js/components/*"],
+            "features/*": ["resources/js/features/*"],
+            // Assets
+            "icons/*": ["resources/assets/icons/*"],
+            "assets/*": ["resources/assets/*"],
+            "hooks/*": ["resources/js/hooks/*"],
+            "layout/*": ["resources/js/layout/*"],
+            "pages/*": ["resources/js/pages/*"],
+            "constants/*": ["resources/js/constants/*"],
+            "config/*": ["resources/js/config/*"],
+            "css/*": ["resources/css/*"],
+            "@/*": ["resources/js/*"]
+        }
+    }
+}
