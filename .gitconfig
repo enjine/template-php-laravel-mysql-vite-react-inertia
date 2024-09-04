@@ -1,0 +1,7 @@
+[include]
+	path = ~/.gitconfig-common
+
+[user]
+	email = 6955491+enjine@users.noreply.github.com
+	name = Alessandro Di Candia
+	signingkey = F930B15AB122FF6A
