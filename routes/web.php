@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,10 @@ use Inertia\Inertia;
 |
 */
 
+/*Route::get('/', function () {
+    return Inertia::render('Test');
+});*/
 
-Route::get('/', function () {
-    return Inertia::render('Test'); // This will get component Test.jsx from the resources/js/Pages/Test.jsx
-});
+Route::get('/', [ProductController::class,'index']);
+
+
