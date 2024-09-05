@@ -9,3 +9,12 @@ mysql_stop:
 
 vite_start:
 	npm run dev
+
+inertia_start:
+	php artisan inertia:start-ssr
+
+test_php:
+	php artisan test
+
+test_js:
+	npm run test
