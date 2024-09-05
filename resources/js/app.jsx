@@ -2,6 +2,7 @@ import React from 'react'
 import {createRoot} from 'react-dom/client'
 import {createInertiaApp } from '@inertiajs/inertia-react'
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers'
+// TODO: figure SSR out
 //import { hydrateRoot } from 'react-dom/client'
 import "./bootstrap";
 import 'css/app.css'
