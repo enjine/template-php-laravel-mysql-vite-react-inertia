@@ -15,18 +15,17 @@ class TodoSeeder extends Seeder
     public function run(): void
     {
         $content = file_get_contents('https://dummyjson.com/todos');
-        $todos = json_decode($content);
+        $data = json_decode($content);
 
-        collect($todos)->each(function ($item, int $key) {
-           \App\Models\Todo::insert([
-            'id' => $item->id,
-            'todo' => $item->todo,
-            'completed' => $item->completed,
-            'user_id' =>$item->userId,
-        ]);
+       collect($data->todos)->each(function ($item) {
+
+            \App\Models\Todo::insert([
+                'id' => $item->id,
+                'todo' => $item->todo,
+                'completed' => $item->completed,
+                'user_id' =>$item->userId,
+            ]);
         });
-
-        Log::info('Seeding Todos');
 
     }
 }
