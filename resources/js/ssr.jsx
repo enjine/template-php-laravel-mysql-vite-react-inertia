@@ -11,18 +11,15 @@ createServer(page =>
     page,
     render: ReactDOMServer.renderToString,
     resolve: (name) => {
-        resolvePageComponent(`./Pages/${name}.jsx`,import.meta.glob('./Pages/**/*.jsx', {eager: true}))
+        return resolvePageComponent(`./Pages/${name}.jsx`,import.meta.glob('./Pages/**/*.jsx', {eager: true}))
             .then((module) => {
-                if (module.default.layout === undefined) {
+                if (module?.default.layout === undefined) {
                     module.default.layout = BaseLayout;
                 }
+                return module
             });
-        return page;
+        return p;
     },
-    setup({ App, props, plugin }) {
-        return createSSRApp({
-            render: () => h(App, props),
-        }).use(plugin)
-    },
+    setup: ({ App, props }) => <App {...props} />,
   }),
 )

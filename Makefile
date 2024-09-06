@@ -13,6 +13,9 @@ mysql_stop:
 vite_start:
 	npm run dev
 
+vite_build:
+	npm run build
+
 inertia_start:
 	php artisan inertia:start-ssr
 
