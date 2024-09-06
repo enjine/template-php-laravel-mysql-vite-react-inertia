@@ -9,7 +9,7 @@
         @vite(['resources/css/app.css','resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         <!-- As you can see, we will use vite with jsx syntax for React-->
         @inertiaHead
-        <title>Propwire Coding Challenge</title>
+        <title>Coding Challenge</title>
     </head>
     <body class="bg-gray-100 text-gray-800">
         @inertia
