@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         @viteReactRefresh
-        @vite('resources/js/app.jsx')
+        @vite(['resources/css/app.css','resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         <!-- As you can see, we will use vite with jsx syntax for React-->
         @inertiaHead
         <title>Propwire Coding Challenge</title>
