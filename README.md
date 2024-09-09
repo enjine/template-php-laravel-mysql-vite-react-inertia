@@ -8,7 +8,7 @@ For some ideas on where you could take this stack, see this [amazing example rep
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-php-laravel-mysql)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/enjine/template-php-laravel-mysql-vite-react-inertia)
 
 ## Get Started With Your Own Project
 
