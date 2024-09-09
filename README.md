@@ -2,6 +2,8 @@
 
 This is a [Laravel with MySQL](https://laravel.com) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/).
 
+For some ideas on where you could take this stack, see this [amazing example repo](https://github.com/liorocks/pingcrm-react/tree/main/resources) by [liorocks](https://github.com/liorocks)
+
 ## Next Steps
 
 Click the button below to start a new development environment:
