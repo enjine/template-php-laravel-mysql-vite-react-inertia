@@ -1,7 +1,8 @@
 import React from 'react'
 import {createInertiaApp } from '@inertiajs/inertia-react'
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers'
-import { hydrateRoot } from 'react-dom/client'
+import { hydrateRoot, createRoot } from 'react-dom/client'
+
 import BaseLayout from './Layouts/BaseLayout'
 import "./bootstrap";
 import 'css/app.css'
@@ -18,7 +19,9 @@ createInertiaApp({
             });
     },
     setup({ el, App, props }) {
-        hydrateRoot(el, <App {...props} />)
+        createRoot(el).render(<App {...props} />)
+        // this is for SSR, TODO: make this environment-dependent (ssr in prod only)
+        //hydrateRoot(el, <App {...props} />)
     },
 })
 
