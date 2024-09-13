@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::inertia('/', 'Test'); // This will get component Test.jsx from the resour
 // Route::get('/', function () {
 //     return Inertia::render('Test');
 // });
+
+// Our routes
+Route::get('/products', [Controller::class, 'getProducts']);
