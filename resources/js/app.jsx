@@ -19,9 +19,11 @@ createInertiaApp({
             });
     },
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />)
-        // this is for SSR, TODO: make this environment-dependent (ssr in prod only)
-        //hydrateRoot(el, <App {...props} />)
+        if(import.meta.env.PROD){
+            createRoot(el).render(<App {...props} />)
+        }else{
+            hydrateRoot(el, <App {...props} />)
+        }
     },
 })
 
