@@ -20,9 +20,9 @@ createInertiaApp({
     },
     setup({ el, App, props }) {
         if(import.meta.env.PROD){
-            createRoot(el).render(<App {...props} />)
-        }else{
             hydrateRoot(el, <App {...props} />)
+        }else{
+            createRoot(el).render(<App {...props} />)
         }
     },
 })
